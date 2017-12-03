@@ -1,0 +1,60 @@
+.header {
+  display: block;
+  position: relative;
+}
+
+div::after {
+  content: "";
+  background: url(../assets/background.jpg);
+  filter: blur(2px);
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;   
+}
+
+.choose-bar-container {
+  display: block;
+  text-align:center;
+  /* font-size: 52px; */
+}
+
+.header-container {
+  padding: 50px;
+  color: #fff;
+  font-weight: lighter;
+  font-family: 'Karla';
+}
+
+h1 {
+ text-align: center;
+ font-weight: normal;
+}
+
+select {
+  border-radius: 5px;
+  background: #fff;
+  width: 30%;
+  padding: 10px;
+}
+
+button {
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 12px;
+  background: #CB202D;
+  border: #CB202D;
+  color: #fff;  
+  /* opacity: 0.7; */
+}
+
+button:hover {
+  background: #bd1522;
+  /* opacity:1; */
+  /* border-radius:5px; */
+}
+
+
+button:focus, select:focus {outline:0;}
