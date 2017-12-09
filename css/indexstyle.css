@@ -1,24 +1,35 @@
 .header {
-  display: block;
-  position: relative;
+  /* display: block; */
+  /* position: relative; */
+  background-image: url(../assets/background.jpg);
+  background-size: cover;
 }
 
-div::after {
-  content: "";
-  background: url(../assets/background.jpg);
-  filter: blur(2px);
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  position: absolute;
-  z-index: -1;   
+.header-container {
+  background: rgba(0,0,0,0.4);
+}
+
+.title {
+  text-align: center;
+  width: 850px;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+
+.navbar {
+  margin: 0;
+}
+
+.form-control {
+  width: 500px !important;
+  /* margin-bottom: 100px; */
 }
 
 .choose-bar-container {
-  display: block;
+  /* display: block; */
   text-align:center;
   /* font-size: 52px; */
+  margin-bottom: 100px;
 }
 
 .header-container {
@@ -28,33 +39,78 @@ div::after {
   font-family: 'Karla';
 }
 
-h1 {
- text-align: center;
- font-weight: normal;
+.team {
+  text-align: center;
+  font-weight: lighter;
+  font-family: 'Karla';
+  background: rgb(243, 243, 243);
 }
 
-select {
-  border-radius: 5px;
-  background: #fff;
-  width: 30%;
-  padding: 10px;
+img {
+  width: 150px;
+  height: 150px;
 }
 
-button {
-  border-radius: 5px;
-  cursor: pointer;
-  padding: 12px;
-  background: #CB202D;
-  border: #CB202D;
-  color: #fff;  
-  /* opacity: 0.7; */
+.thumbnail {
+  background: rgb(243, 243, 243);
+  border: none;
 }
 
-button:hover {
-  background: #bd1522;
-  /* opacity:1; */
-  /* border-radius:5px; */
+.row {
+  margin: 0;
 }
 
+.team-title {
+  margin: 0;
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+/* #member-photo {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+} */
 
-button:focus, select:focus {outline:0;}
+/* #member { */
+  /* float:left; */
+  /* text-align: center; */
+  /* display:block;
+  margin-left: auto;
+  margin-right: auto; */
+  /* margin-right: 90px;
+  margin-left: 90px;
+  margin-top: 50px;
+} */
+
+/* .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+  color: #000;  /*Sets the text hover color on navbar
+}
+  
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active >   
+  a:hover, .navbar-default .navbar-nav > .active > a:focus {
+    color: white; /*BACKGROUND color for active
+    background-color: #030033;
+}
+  
+.navbar-default {
+  background-color:  #fff;
+  border-color: #030033;
+}
+  
+.dropdown-menu > li > a:hover,
+  .dropdown-menu > li > a:focus {
+    color: #262626;
+    text-decoration: none;
+    background-color: #66CCFF;  /*change color of links in drop down here*/
+/*}
+  
+.nav > li > a:hover,
+.nav > li > a:focus {
+  text-decoration: none;
+  background-color: silver; /*Change rollover cell color here*/
+/*}
+
+  
+.navbar-default .navbar-nav > li > a {
+  color: white; /*Change active text color here*/
+/*} */
