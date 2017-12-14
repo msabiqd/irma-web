@@ -76,16 +76,18 @@
                     </p>
                 </div>
                 <div class="choose-bar-container">
-                    <div class="form-inline">
-                        <select class="form-control">
-                            <option value="beji">Warunk Upnormal Beji Depok</option>
-                            <option value="cempaka-putih">Warunk Upnormal Cempaka Putih</option>
-                            <option value="kelapa-gading">Warunk Upnormal Kelapa Gading</option>
-                            <option value="tebet">Warunk Upnormal Tebet</option>
-                            <option value="serpong">Warunk Upnormal Serpong Utara Tangerang</option>
-                        </select>
-                        <button type="button" class="btn btn-success">Cari</button>
-                    </div>
+                    <form method="GET" action="html/detail_resto.php">
+                        <div class="form-inline">
+                            <select class="form-control" name="resto_option">
+                                <option value="beji">Warunk Upnormal Beji Depok</option>
+                                <option value="cempaka-putih">Warunk Upnormal Cempaka Putih</option>
+                                <option value="kelapa-gading">Warunk Upnormal Kelapa Gading</option>
+                                <option value="tebet">Warunk Upnormal Tebet</option>
+                                <option value="serpong">Warunk Upnormal Serpong Utara Tangerang</option>
+                            </select>
+                            <button type="submit" class="btn btn-success">Cari</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
