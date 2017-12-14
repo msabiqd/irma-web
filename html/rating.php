@@ -8,7 +8,7 @@
 		<title>Sentiment Analysis Warunk Upnormal</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
         integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-        <link rel="stylesheet" type="text/css" href="./css/indexstyle.css">
+        <link rel="stylesheet" type="text/css" href="../css/ratingstyle.css">
         <link href='https://fonts.googleapis.com/css?family=Karla' rel='stylesheet'>
 	</head>
 	<body>
@@ -28,36 +28,37 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <!-- <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li> -->
                     <li><a href="../">Home</a></li>
-                    <!-- <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">Action</a></li>
-                        <li><a href="#">Another action</a></li>
-                        <li><a href="#">Something else here</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a href="#">Separated link</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a href="#">One more separated link</a></li>
-                    </ul>
-                    </li> -->
+                    <li>Pilih cabang</li>
                 </ul>
                 <form class="navbar-form navbar-left">
                     <div class="form-group">
-                        <select class="form-control">
+                        <select class="form-control" onchange="javascript:location.href = this.value;">
                             <option value="beji">Warunk Upnormal Beji Depok</option>
                             <option value="cempaka-putih">Warunk Upnormal Cempaka Putih</option>
                             <option value="kelapa-gading">Warunk Upnormal Kelapa Gading</option>
                             <option value="tebet">Warunk Upnormal Tebet</option>
                             <option value="serpong">Warunk Upnormal Serpong Utara Tangerang</option>
                         </select>
-                    <!-- <input type="text" class="form-control" placeholder="Search"> -->
                     </div>
-                    <button type="submit" class="btn btn-success">Cari</button>
+                    <!-- <button type="submit" class="btn btn-success">Cari</button> -->
                 </form>
                 </div><!-- /.navbar-collapse -->
             </div><!-- /.container-fluid -->
         </nav>
+        <div class="row">
+            <div class="col-sm-6 col-md-1">
+            </div>
+            <div class="col-sm-6 col-md-10">
+                <div class="thumbnail">
+                <div class="caption">
+                    <h1>Warunk Upnormal Tebet</h1>
+                    <hr>
+                    <h4>rating: </h4>
+                    <span class="fa fa-star-o" data-rating="1"></span>
+                </div>
+                </div>
+            </div>
+        </div>
 	</body>
 </html>
