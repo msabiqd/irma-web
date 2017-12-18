@@ -1,12 +1,12 @@
 var randomScalingFactor = function() {
     return Math.round(Math.random() * 100);
 };
-var increment = 0;
+
 var beji_data = function(){
     var tmp = null;
 
     $.ajax({
-        url: "https://www.mocky.io/v2/5a34abbd3000004b324b7640",
+        url: "https://private-e75e5-muhammadsabiqdanurrohman.apiary-mock.com/"+window.location.href.split("=")[1],
         type: "GET",
         async: false, 
         contentType: 'application/json; charset=utf-8',
@@ -34,10 +34,10 @@ function loadDoc() {
         max = increment;
     }
     for (i = 0; i < max; i++) {
-        result += '<div class="panel panel-default"><div class="panel-body">' + 
-                  beji_data.reviews[i].review_body + window.location.href.split("=")[1] +'<p class="rating rating-irma"> <b>rating by irma : ' + beji_data.reviews[i].rating_irma + '</b><p>'
-                  + '<p class="rating rating-zomato"> <b>rating by zomato : ' + beji_data.reviews[i].rating_zomato + '</b><p>' +
-                  '</div></div>'
+        result += '<div class="panel panel-default"><div class="panel-body">' + '<div class="row"><div class="col-md-10">' + 
+                  beji_data.reviews[i].review_body + window.location.href.split("=")[1] +'</div><div class="col-md-2"><p class="rating rating-irma"> <b>rating by irma : ' + beji_data.reviews[i].rating_irma + '</b></p>'
+                  + '<p class="rating rating-zomato"> <b>rating by zomato : ' + beji_data.reviews[i].rating_zomato + '</b></p>' +
+                  '</div></div></div></div>'
     }
     // document.getElementById("demo").innerHTML = beji_data.reviews[0].rating_zomato;
     // $('.btn btn-primary').remove();
@@ -63,10 +63,10 @@ function loadMore() {
         max = increment;
     }
     for (i = start; i < max; i++) {
-        result += '<div class="panel panel-default"><div class="panel-body">' + 
-                  beji_data.reviews[i].review_body + '<p class="rating rating-irma"> <b>rating by irma : ' + beji_data.reviews[i].rating_irma + '</b></p>'
-                  + '<p class="rating rating-zomato"> <b>rating by zomato : ' + beji_data.reviews[i].rating_zomato + '</b></p>' +
-                  '</div></div>' 
+        result += '<div class="panel panel-default"><div class="panel-body">' + '<div class="row"><div class="col-md-10">' + 
+                    beji_data.reviews[i].review_body + window.location.href.split("=")[1] +'</div><div class="col-md-2"><p class="rating rating-irma"> <b>rating by irma : ' + beji_data.reviews[i].rating_irma + '</b></p>'
+                    + '<p class="rating rating-zomato"> <b>rating by zomato : ' + beji_data.reviews[i].rating_zomato + '</b></p>' +
+                    '</div></div></div></div>' 
     }
     if (increment < beji_data.reviews.length) {
         result += '<button type="button" class="btn btn-primary" onclick="loadMore()">Load More</button>'

@@ -10,7 +10,8 @@ h1 {
 }
 
 .rating {
-    float: right;
+    float: left;
+    clear: left;
 }
 
 .rating-irma {
