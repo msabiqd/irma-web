@@ -6,7 +6,7 @@ var beji_data = function(){
     var tmp = null;
 
     $.ajax({
-        url: "http://www.mocky.io/v2/5a34abbd3000004b324b7640",
+        url: "https://www.mocky.io/v2/5a34abbd3000004b324b7640",
         type: "GET",
         async: false, 
         contentType: 'application/json; charset=utf-8',
