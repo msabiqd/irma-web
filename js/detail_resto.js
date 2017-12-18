@@ -1,6 +1,7 @@
 var randomScalingFactor = function() {
     return Math.round(Math.random() * 100);
 };
+var increment = 0;
 
 var beji_data = function(){
     var tmp = null;
