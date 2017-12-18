@@ -41,7 +41,7 @@
                 <div id="demo">
                     <button class="btn btn-primary" onclick="loadDoc()">Lihat Detail</button>
                     <div class="panel panel-default">
-                        <div class="panel-body">
+                        <!-- <div class="panel-body">
                         <div class="row">
                             <div class="col-md-8">asddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd</div>
                             <div class="col-md-4"> 
@@ -49,7 +49,7 @@
                                 <p class="rating rating-zomato"> <b>rating by zomato </b></p>
                             </div>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
