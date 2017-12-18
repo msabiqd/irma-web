@@ -1,0 +1,30 @@
+h1 {
+    font-weight: lighter;
+    font-family: 'Karla';
+}
+
+.btn-primary {
+    float: right
+    /* position: absolute; */
+    /* right: 0; */
+}
+
+.rating {
+    float: right;
+}
+
+.rating-irma {
+    color: blue;
+}
+
+.rating-zomato {
+    color: red;
+}
+
+.panel-body {
+    min-height: 110px;
+}
+
+.big-title {
+    text-align: center;
+}
