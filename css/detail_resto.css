@@ -4,9 +4,8 @@ h1 {
 }
 
 .btn-primary {
-    float: right
-    /* position: absolute; */
-    /* right: 0; */
+    float: right;
+    margin: 10px;
 }
 
 .rating {
@@ -28,4 +27,8 @@ h1 {
 
 .big-title {
     text-align: center;
+}
+
+.footer {
+    min-height: 100px;
 }
