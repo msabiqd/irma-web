@@ -37,16 +37,13 @@ function loadDoc() {
     for (i = 0; i < max; i++) {
         result += '<div class="panel panel-default"><div class="panel-body">' + '<div class="row"><div class="col-md-10">' + 
                   beji_data.reviews[i].review_body + window.location.href.split("=")[1] +'</div><div class="col-md-2"><p class="rating rating-irma"> <b>rating by irma : ' + beji_data.reviews[i].rating_irma + '</b></p>'
-                  + '<p class="rating rating-zomato"> <b>rating by zomato : ' + beji_data.reviews[i].rating_zomato + '</b></p>' +
+                  + '<p class="rating rating-zomato"> <b>rating by zomato : ' + beji_data.reviews[i].rating_zomato + '</b></p>' + '<p class="rating sentiment"> <b>sentiment point : ' + beji_data.reviews[i].sentiment_point + '</b></p>' +
                   '</div></div></div></div>'
     }
-    // document.getElementById("demo").innerHTML = beji_data.reviews[0].rating_zomato;
-    // $('.btn btn-primary').remove();
+
     result += '<button type="button" class="btn btn-primary" onclick="loadMore()">Load More</button>'
     var div = $('#demo');
-    // div.slideUp(1); 
     div.html(result);
-    // div.fadeIn(1000);  
     $('html, body').animate({
         scrollTop: $(".title-review").offset().top
     }, 1000);
@@ -66,22 +63,15 @@ function loadMore() {
     for (i = start; i < max; i++) {
         result += '<div class="panel panel-default"><div class="panel-body">' + '<div class="row"><div class="col-md-10">' + 
                     beji_data.reviews[i].review_body + window.location.href.split("=")[1] +'</div><div class="col-md-2"><p class="rating rating-irma"> <b>rating by irma : ' + beji_data.reviews[i].rating_irma + '</b></p>'
-                    + '<p class="rating rating-zomato"> <b>rating by zomato : ' + beji_data.reviews[i].rating_zomato + '</b></p>' +
+                    + '<p class="rating rating-zomato"> <b>rating by zomato : ' + beji_data.reviews[i].rating_zomato + '</b></p>' + '<p class="rating sentiment"> <b>sentiment point : ' + beji_data.reviews[i].sentiment_point + '</b></p>' +
                     '</div></div></div></div>' 
     }
     if (increment < beji_data.reviews.length) {
         result += '<button type="button" class="btn btn-primary" onclick="loadMore()">Load More</button>'
     }
-    // var div = $("#demo");
-    // div.slideUp(1);
+
     $("#demo").append(result);
-    // div.fadeIn(1000);  
-    // $('html, body').animate({
-    //     scrollTop: $(".footer").offset().top+1000
-    // }, 2000);
-     
-    // div.html(result);
-    // div.fadeIn(1000);  
+ 
     $('html, body').animate({
         scrollTop: $(".btn-primary").offset().top
     }, 1000);
@@ -96,7 +86,6 @@ var config = {
             fill: false,
             backgroundColor: 'red',
             borderColor: 'red',
-        //    data: [beji_data['rating_zomato']]
             data: [beji_data.reviews[0].rating_zomato,beji_data.reviews[1].rating_zomato,beji_data.reviews[2].rating_zomato,
             beji_data.reviews[3].rating_zomato,beji_data.reviews[4].rating_zomato,beji_data.reviews[5].rating_zomato,beji_data.reviews[6].rating_zomato,
             beji_data.reviews[7].rating_zomato,beji_data.reviews[8].rating_zomato,beji_data.reviews[9].rating_zomato,beji_data.reviews[10].rating_zomato,
@@ -133,9 +122,8 @@ var config = {
             yAxes: [{
                 display: true,
                 ticks: {
-                    suggestedMin: 0,    // minimum will be 0, unless there is a lower value.
-                    // OR //
-                    beginAtZero: true   // minimum value will be 0.
+                    suggestedMin: 0,   
+                    beginAtZero: true   
                 },
                 gridLines: {
                     display:false
@@ -158,25 +146,6 @@ function findGetParameter(parameterName) {
     return result;
 }
 
-
-// function loadDoc() {
-//     $.ajax({
-//         url: "http://www.mocky.io/v2/5a34abbd3000004b324b7640",
-//         type: "GET",
-    
-//         contentType: 'application/json; charset=utf-8',
-//         success: function(resultData) {
-//             //here is your json.
-//               // process it
-//               var result = JSON.stringify(resultData)
-//               document.getElementById("demo").innerHTML = resultData['rating_zomato']
-//         },
-//         error : function(jqXHR, textStatus, errorThrown) {
-//         },
-    
-//         timeout: 120000,
-//     });
-// }
 
 window.onload = function() {
     var param = findGetParameter('resto_option')
